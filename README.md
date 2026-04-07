@@ -1,6 +1,6 @@
 # ThreeFkNova Website
 
-This repository contains the Next.js website for ThreeFkNova, along with the Docker-based deployment files used on the server.
+ThreeFk Nova Technologies official website for showcasing enterprise products and services, including EduERP, BizSuite, Inventory Suite, cloud services, and AI-enabled workflows.
 
 ## Local development
 
