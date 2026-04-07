@@ -1,0 +1,31 @@
+services:
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: threefknova-website:1.0.0
+    container_name: threefknova-website
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - proxy
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.threefknova-website.rule=Host(`threefknova.com`) || Host(`www.threefknova.com`)"
+      - "traefik.http.routers.threefknova-website.entrypoints=websecure"
+      - "traefik.http.routers.threefknova-website.tls=true"
+      - "traefik.http.routers.threefknova-website.tls.certresolver=letsencrypt"
+      - "traefik.http.services.threefknova-website.loadbalancer.server.port=3000"
+
+networks:
+  proxy:
+    external: true

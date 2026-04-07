@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+/* =========================
+   ThreeFk Nova Design System
+   ========================= */
+
+:root {
+  --brand-navy: #071225;
+  --brand-cyan: #11C5F5;
+  --brand-amber: #F59E0B;
+
+  --brand-card: #0D1B34;
+  --brand-border: rgba(255, 255, 255, 0.08);
+  --brand-text: #F8FAFC;
+  --brand-muted: #9FB3C8;
+
+  --background: var(--brand-navy);
+  --foreground: var(--brand-text);
+
+  --font-sans: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+  --font-mono: var(--font-geist-mono, monospace);
+}
+
+/* =========================
+   Base
+   ========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   Layout helpers
+   ========================= */
+
+.brand-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .brand-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.brand-card {
+  background: var(--brand-card);
+  border: 1px solid var(--brand-border);
+  border-radius: 1.5rem;
+}
+
+.brand-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.brand-muted {
+  color: var(--brand-muted);
+}
+
+.brand-highlight {
+  color: var(--brand-cyan);
+}
+
+.brand-accent {
+  color: var(--brand-amber);
+}
+
+/* =========================
+   Buttons
+   ========================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-cyan);
+  color: #071225;
+  border-radius: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #22d3ee;
+  color: #071225;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--brand-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--brand-text);
+  border-radius: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--brand-text);
+}
+
+/* =========================
+   Panels
+   ========================= */
+
+.panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--brand-border);
+  border-radius: 1.75rem;
+  backdrop-filter: blur(10px);
+}
+
+/* =========================
+   Pricing
+   ========================= */
+
+.pricing-highlight {
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.08);
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.12);
+}
+
+/* =========================
+   Forms
+   ========================= */
+
+.input {
+  width: 100%;
+  background: #0b1a33;
+  border: 1px solid var(--brand-border);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: white;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--brand-cyan);
+}
+
+/* =========================
+   Links
+   ========================= */
+
+a {
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--brand-cyan);
+}
