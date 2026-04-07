@@ -1,5 +1,20 @@
 import PageHeader from "@/components/PageHeader";
+import { buildMetadata } from "@/lib/metadata";
 import { siteContent } from "@/lib/site-content";
+
+export const metadata = buildMetadata({
+  title: "System Requirements",
+  description:
+    "Review the ThreeFk Nova client appliance deployment requirements for education ERP and business software solutions, including Windows 11 host expectations and Hyper-V readiness.",
+  path: "/system-requirements",
+  keywords: [
+    "system requirements",
+    "client appliance deployment",
+    "Hyper-V deployment requirements",
+    "education ERP appliance",
+    "Windows 11 Hyper-V software deployment",
+  ],
+});
 
 export default function SystemRequirementsPage() {
   return (

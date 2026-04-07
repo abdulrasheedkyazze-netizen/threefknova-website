@@ -11,7 +11,7 @@ export const siteContent = {
     badge: "AI-powered enterprise technology",
     title: "Build smarter digital systems with ThreeFk Nova Technologies",
     description:
-      "We design and deliver professional websites, advanced business platforms, education ERP systems, cloud-ready deployments, and AI-integrated digital experiences.",
+      "We design and deliver professional websites, school management software, business management platforms, cloud-ready deployments, and AI-integrated digital experiences for organizations that need dependable growth.",
     primaryCta: {
       label: "Explore Products",
       href: "/products",
@@ -26,21 +26,21 @@ export const siteContent = {
       slug: "eduerp",
       name: "ThreeFk Nova EduERP",
       summary:
-        "Academics, exams, finance, reports, governance, and school operations.",
+        "School management software for academics, exams, finance, reports, governance, and institutional operations.",
       category: "Education ERP",
     },
     {
       slug: "bizsuite",
       name: "ThreeFk Nova BizSuite",
       summary:
-        "Quotations, invoicing, expenses, approvals, dashboards, and business control.",
+        "Business management software for quotations, invoicing, expenses, approvals, dashboards, and commercial control.",
       category: "Business Platform",
     },
     {
       slug: "cloud-services",
       name: "ThreeFk Nova Cloud Services",
       summary:
-        "Secure deployments, support, monitoring, hosting, and release workflows.",
+        "Managed cloud services for secure deployments, monitoring, hosting, backups, and release workflows.",
       category: "Infrastructure",
     },
   ],
@@ -51,9 +51,9 @@ export const siteContent = {
     { label: "AI Layer", value: "Server-side" },
   ],
   highlights: [
-    "Secure cloud deployments",
-    "AI-powered digital experiences",
-    "Scalable business systems",
-    "Professional product delivery",
+    "School management software and education ERP",
+    "Business management software for operations and finance",
+    "Managed cloud deployment and operational support",
+    "AI-powered digital experiences and automation",
   ],
 };

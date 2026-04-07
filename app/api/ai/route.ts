@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getOpenAIClient } from "@/lib/openai";
 
 export const runtime = "nodejs";
+export const revalidate = 3600;
 
 const fallback = [
   {

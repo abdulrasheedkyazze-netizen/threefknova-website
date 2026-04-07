@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FormEvent, useMemo, useState } from "react";
 
 type FormState = {
@@ -12,6 +13,7 @@ type FormState = {
   message: string;
   interests: string[];
   consent: boolean;
+  website: string;
 };
 
 type StatusState =
@@ -29,6 +31,7 @@ const initialForm: FormState = {
   message: "",
   interests: [],
   consent: false,
+  website: "",
 };
 
 const interestOptions = [
@@ -176,6 +179,18 @@ export default function ContactPage() {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="hidden" aria-hidden="true">
+                <label>
+                  Website
+                  <input
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={form.website}
+                    onChange={(e) => updateField("website", e.target.value)}
+                  />
+                </label>
+              </div>
+
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
                   <label className="mb-2 block text-sm font-medium text-slate-200">
@@ -383,9 +398,11 @@ export default function ContactPage() {
             <div className="flex items-center justify-center py-10">
               <div className="relative flex h-56 w-56 items-center justify-center rounded-full bg-cyan-300/10 shadow-[0_0_80px_rgba(34,211,238,0.18)]">
                 <div className="flex h-36 w-36 items-center justify-center rounded-full border border-cyan-300/20 bg-white shadow-[0_12px_40px_rgba(15,23,42,0.25)]">
-                  <img
+                  <Image
                     src="/img/logo.png"
                     alt="ThreeFk Nova"
+                    width={80}
+                    height={80}
                     className="h-20 w-20 rounded-full object-cover"
                   />
                 </div>

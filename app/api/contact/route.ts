@@ -1,4 +1,5 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 
 type ContactPayload = {
   firstName?: string;
@@ -10,10 +11,18 @@ type ContactPayload = {
   interests?: string[];
   message?: string;
   consent?: boolean;
+  website?: string;
 };
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+export const runtime = "nodejs";
 
 function required(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
+}
+
+function validEmail(value: string) {
+  return EMAIL_PATTERN.test(value);
 }
 
 function escapeHtml(value: string) {
@@ -87,9 +96,40 @@ function buildLeadPayload({
   };
 }
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
+    const rateLimit = checkRateLimit({
+      namespace: "contact",
+      key: getClientIp(req),
+      max: 5,
+      windowMs: 60 * 60 * 1000,
+    });
+
+    if (!rateLimit.ok) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error:
+            "Too many contact requests were submitted from this connection. Please try again later.",
+        },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(rateLimit.retryAfter),
+          },
+        }
+      );
+    }
+
     const body = (await req.json()) as ContactPayload;
+    const honeypot = body.website?.trim() || "";
+
+    if (honeypot) {
+      return NextResponse.json({
+        ok: true,
+        message: "Your message has been received successfully.",
+      });
+    }
 
     const firstName = body.firstName?.trim() || "";
     const lastName = body.lastName?.trim() || "";
@@ -97,7 +137,9 @@ export async function POST(req: Request) {
     const phone = body.phone?.trim() || "";
     const company = body.company?.trim() || "";
     const location = body.location?.trim() || "";
-    const interests = Array.isArray(body.interests) ? body.interests : [];
+    const interests = Array.isArray(body.interests)
+      ? body.interests.filter((item): item is string => typeof item === "string").slice(0, 6)
+      : [];
     const message = body.message?.trim() || "";
     const consent = body.consent === true;
 
@@ -108,9 +150,23 @@ export async function POST(req: Request) {
       );
     }
 
+    if (!validEmail(email)) {
+      return NextResponse.json(
+        { ok: false, error: "Please enter a valid business email address." },
+        { status: 400 }
+      );
+    }
+
     if (!consent) {
       return NextResponse.json(
         { ok: false, error: "Please confirm consent to process your personal data." },
+        { status: 400 }
+      );
+    }
+
+    if (message.length > 4000) {
+      return NextResponse.json(
+        { ok: false, error: "Please keep your project details under 4000 characters." },
         { status: 400 }
       );
     }
@@ -152,13 +208,14 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify(leadPayload),
       cache: "no-store",
+      signal: AbortSignal.timeout(10000),
     });
 
     const leadResultText = await leadResponse.text();
     console.log("BizSuite lead status:", leadResponse.status);
-    console.log("BizSuite lead body:", leadResultText);
 
     if (!leadResponse.ok) {
+      console.error("BizSuite lead error body:", leadResultText.slice(0, 500));
       return NextResponse.json(
         {
           ok: false,
@@ -307,11 +364,14 @@ ${message}
             textbody: salesTextBody,
           }),
           cache: "no-store",
+          signal: AbortSignal.timeout(10000),
         });
 
         const salesResultText = await salesResponse.text();
         console.log("Sales email status:", salesResponse.status);
-        console.log("Sales email body:", salesResultText);
+        if (!salesResponse.ok) {
+          console.error("Sales email body:", salesResultText.slice(0, 500));
+        }
       } catch (salesError) {
         console.error("Sales email send error:", salesError);
       }
@@ -429,11 +489,14 @@ ThreeFk Nova Technologies
             textbody: autoReplyText,
           }),
           cache: "no-store",
+          signal: AbortSignal.timeout(10000),
         });
 
         const autoReplyResultText = await autoReplyResponse.text();
         console.log("Auto-reply status:", autoReplyResponse.status);
-        console.log("Auto-reply body:", autoReplyResultText);
+        if (!autoReplyResponse.ok) {
+          console.error("Auto-reply body:", autoReplyResultText.slice(0, 500));
+        }
       } catch (autoReplyError) {
         console.error("Auto-reply send error:", autoReplyError);
       }
@@ -445,6 +508,11 @@ ThreeFk Nova Technologies
       ok: true,
       leadCode,
       message: "Your message has been sent successfully. Our sales team will get back to you shortly.",
+    }, {
+      headers: {
+        "X-RateLimit-Limit": String(rateLimit.limit),
+        "X-RateLimit-Remaining": String(rateLimit.remaining),
+      },
     });
   } catch (error) {
     console.error("Contact API error:", error);

@@ -11,9 +11,54 @@ import HighlightsStrip from "@/components/HighlightsStrip";
 import StatsStrip from "@/components/StatsStrip";
 import WebsiteAssistant from "@/components/WebsiteAssistant";
 import HomepageCTACards from "@/components/HomepageCTACards";
+import IndustryFocus from "@/components/IndustryFocus";
+import DeliveryJourney from "@/components/DeliveryJourney";
+import FAQSection from "@/components/FAQSection";
+import TrustSignals from "@/components/TrustSignals";
+import VisualProofGallery from "@/components/VisualProofGallery";
 import { siteContent } from "@/lib/site-content";
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata = buildMetadata({
+  title: "Enterprise Websites, ERP Systems, Cloud and AI Solutions",
+  description:
+    "ThreeFk Nova Technologies delivers school management software, business management platforms, managed cloud services, professional websites, and AI-powered automation for organizations that need dependable digital transformation.",
+  path: "/",
+  keywords: [
+    "school management software Uganda",
+    "education ERP company",
+    "business management software Uganda",
+    "quotation and invoicing software",
+    "managed cloud services Uganda",
+    "AI automation company Uganda",
+    "enterprise website development",
+  ],
+});
 
 export default function HomePage() {
+  const homeFaq = [
+    {
+      question: "What does ThreeFk Nova Technologies actually provide?",
+      answer:
+        "ThreeFk Nova Technologies provides professional websites, school management software, business management platforms, managed cloud services, and AI-powered digital experiences for institutions and growing organizations.",
+    },
+    {
+      question: "Who is the website best suited for?",
+      answer:
+        "The strongest fit includes schools, institutions, SMEs, operational teams, and organizations looking for a serious implementation partner rather than a simple brochure-site vendor.",
+    },
+    {
+      question: "Can ThreeFk Nova support both deployment and implementation?",
+      answer:
+        "Yes. The company positions itself around planning, onboarding, cloud deployment, training, and long-term support in addition to software delivery and website execution.",
+    },
+    {
+      question: "How should a serious buyer engage next?",
+      answer:
+        "The best next step is to request a demo or consultation through the contact form so requirements, deployment model, and commercial fit can be reviewed properly.",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       {/* Hero */}
@@ -120,10 +165,19 @@ export default function HomePage() {
       {/* Highlights */}
       <HighlightsStrip />
 
+      {/* Industry Focus */}
+      <IndustryFocus />
+
       {/* AI Insights */}
       <section className="brand-container py-16">
         <AIInsights />
       </section>
+
+      {/* Delivery Model */}
+      <DeliveryJourney />
+
+      {/* Trust Signals */}
+      <TrustSignals />
 
       {/* Assistant */}
       <WebsiteAssistant />
@@ -133,6 +187,9 @@ export default function HomePage() {
 
       {/* Products */}
       <FeaturedProducts />
+
+      {/* Visual Proof */}
+      <VisualProofGallery />
 
       {/* Closing CTA */}
       <section className="brand-container pb-24">
@@ -162,6 +219,15 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="brand-container pb-24">
+        <FAQSection
+          eyebrow="Frequently Asked Questions"
+          title="Helpful answers for buyers comparing technology partners, ERP platforms, websites, cloud services, and AI support"
+          description="This question-based content helps both prospective clients and search engines understand what ThreeFk Nova Technologies does best."
+          items={homeFaq}
+        />
       </section>
     </main>
   );

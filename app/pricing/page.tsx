@@ -1,5 +1,20 @@
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata = buildMetadata({
+  title: "Pricing and Licensing",
+  description:
+    "Review ThreeFk Nova EduERP pricing, licensing, onboarding scope, and custom quote options for schools and institutions looking for a professional school management system.",
+  path: "/pricing",
+  keywords: [
+    "EduERP pricing",
+    "school management software pricing",
+    "education ERP pricing",
+    "ERP licensing",
+    "school software demo pricing",
+  ],
+});
 
 const plans = [
   {
@@ -61,6 +76,24 @@ const annualIncludes = [
   "Update entitlement according to subscription tier",
   "Support access according to purchased package",
   "Operational continuity guidance",
+];
+
+const pricingQuestions = [
+  {
+    title: "Who is this pricing designed for?",
+    answer:
+      "The published structure is designed primarily for schools and institutions evaluating ThreeFk Nova EduERP with professional setup, onboarding, and annual licensing support.",
+  },
+  {
+    title: "Can pricing change by implementation scope?",
+    answer:
+      "Yes. Final proposals may vary based on migration effort, number of modules, user onboarding needs, reporting requirements, and deployment complexity.",
+  },
+  {
+    title: "Can larger organizations request a tailored quote?",
+    answer:
+      "Absolutely. Multi-campus environments, advanced reporting needs, larger deployments, or custom commercial requirements can be handled through a tailored proposal.",
+  },
 ];
 
 export default function PricingPage() {
@@ -151,6 +184,15 @@ export default function PricingPage() {
           </Link>
         </div>
       </div>
+
+      <section className="mt-12 grid gap-6 lg:grid-cols-3">
+        {pricingQuestions.map((item) => (
+          <div key={item.title} className="brand-card p-8">
+            <h2 className="text-xl font-semibold text-white">{item.title}</h2>
+            <p className="mt-4 text-slate-300">{item.answer}</p>
+          </div>
+        ))}
+      </section>
     </main>
   );
 }
