@@ -8,8 +8,8 @@ export default function FeaturedProducts() {
       <div className="mb-8">
         <h2 className="text-3xl font-semibold">Core Solutions</h2>
         <p className="mt-3 max-w-2xl text-slate-400">
-          A connected product family designed for education, business operations,
-          cloud delivery, and AI-driven growth.
+          Explore ThreeFk Nova solutions for education, business operations,
+          managed cloud services, and AI-powered growth.
         </p>
       </div>
 

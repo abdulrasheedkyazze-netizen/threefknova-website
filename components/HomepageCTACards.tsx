@@ -3,25 +3,25 @@ import Link from "next/link";
 const cards = [
   {
     title: "View Pricing",
-    description: "Explore setup costs, annual licensing, and package structure for institutions.",
+    description: "See EduERP package pricing and request tailored quotations for other ThreeFk Nova solutions.",
     href: "/pricing",
     button: "Open Pricing",
   },
   {
     title: "System Requirements",
-    description: "Review client appliance requirements, Hyper-V support, and deployment readiness.",
+    description: "Review the technical requirements for supported client deployments.",
     href: "/system-requirements",
     button: "See Requirements",
   },
   {
     title: "Contact Sales",
-    description: "Speak with our team about product selection, pricing, onboarding, and implementation.",
+    description: "Speak with our team about demos, product selection, pricing, and support.",
     href: "/contact",
     button: "Contact Sales",
   },
   {
     title: "Request Custom Demo",
-    description: "Book a guided demonstration aligned to your institution’s needs and deployment model.",
+    description: "Book a guided demonstration tailored to your institution or business.",
     href: "/contact",
     button: "Request Demo",
   },

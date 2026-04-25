@@ -1,23 +1,23 @@
 const proofItems = [
   {
-    title: "Production-ready website delivery",
+    title: "Professional delivery",
     description:
-      "The website stack already supports a standalone production build, structured metadata, crawl files, security headers, and contact-to-CRM integration.",
+      "Projects are handled with clear planning, structured delivery, and dependable follow-through from discovery to launch.",
   },
   {
-    title: "Product-led service positioning",
+    title: "Connected solutions",
     description:
-      "The brand is not limited to one-off websites. It presents a connected offer across EduERP, BizSuite, managed cloud services, and AI-enabled digital experiences.",
+      "Websites, software, cloud services, and AI solutions can work together under one trusted technology partner.",
   },
   {
-    title: "Operationally grounded lead handling",
+    title: "Support beyond launch",
     description:
-      "Sales enquiries can be captured, categorized, and routed into the BizSuite CRM workflow instead of remaining a disconnected inbox-only process.",
+      "Clients can continue with onboarding, training, support, and guided improvements after implementation.",
   },
   {
-    title: "Implementation-minded delivery model",
+    title: "Business-focused thinking",
     description:
-      "The website clearly supports planning, onboarding, deployment readiness, training, and long-term support rather than only surface-level marketing claims.",
+      "Every solution is shaped around daily operations, reporting, visibility, and practical business value.",
   },
 ];
 
@@ -26,15 +26,15 @@ export default function TrustSignals() {
     <section className="brand-container pb-20">
       <div className="mb-8 max-w-3xl">
         <div className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-cyan-300">
-          Professional Signals
+          Why Choose Us
         </div>
         <h2 className="text-3xl font-semibold text-white md:text-4xl">
-          Why the website now feels more credible to enterprise buyers
+          Why organizations choose ThreeFk Nova
         </h2>
         <p className="mt-4 text-slate-300">
-          Strong B2B websites do more than look polished. They show operational
-          seriousness, a clear product story, and real delivery thinking. These are
-          the signals the ThreeFk Nova experience is now designed to communicate.
+          We combine strong product thinking, dependable delivery, and practical
+          support to help clients choose and run the right technology solution
+          with confidence.
         </p>
       </div>
 

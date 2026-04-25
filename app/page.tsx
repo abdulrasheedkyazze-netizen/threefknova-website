@@ -45,17 +45,17 @@ export default function HomePage() {
     {
       question: "Who is the website best suited for?",
       answer:
-        "The strongest fit includes schools, institutions, SMEs, operational teams, and organizations looking for a serious implementation partner rather than a simple brochure-site vendor.",
+        "ThreeFk Nova is a strong fit for schools, institutions, SMEs, and organizations that want dependable websites, software, cloud support, and practical digital growth.",
     },
     {
       question: "Can ThreeFk Nova support both deployment and implementation?",
       answer:
-        "Yes. The company positions itself around planning, onboarding, cloud deployment, training, and long-term support in addition to software delivery and website execution.",
+        "Yes. ThreeFk Nova supports implementation, setup, training, cloud services, and ongoing support in addition to software delivery and website development.",
     },
     {
       question: "How should a serious buyer engage next?",
       answer:
-        "The best next step is to request a demo or consultation through the contact form so requirements, deployment model, and commercial fit can be reviewed properly.",
+        "The best next step is to request a demo or consultation through the contact form so our team can recommend the right solution and pricing path.",
     },
   ];
 
@@ -101,11 +101,11 @@ export default function HomePage() {
 
               <div className="brand-card p-5">
                 <div className="mb-2 text-sm font-medium text-cyan-300">
-                  Deployment ready
+                  Flexible delivery
                 </div>
                 <p className="text-sm leading-7 text-slate-300">
-                  Available with cloud-ready architecture and client appliance deployment
-                  options for controlled enterprise rollout.
+                  Available as managed cloud services or guided client deployments,
+                  depending on the needs of your organization.
                 </p>
               </div>
             </div>
@@ -203,9 +203,9 @@ export default function HomePage() {
                 Let’s shape the right solution for your institution
               </h2>
               <p className="mt-4 max-w-3xl text-slate-300">
-                From pricing guidance and appliance deployment to demos, onboarding,
-                and implementation planning, our team can help you choose the right
-                path with confidence.
+                From pricing guidance and demos to implementation, support, and
+                managed services, our team can help you choose the right path
+                with confidence.
               </p>
             </div>
 
@@ -225,7 +225,7 @@ export default function HomePage() {
         <FAQSection
           eyebrow="Frequently Asked Questions"
           title="Helpful answers for buyers comparing technology partners, ERP platforms, websites, cloud services, and AI support"
-          description="This question-based content helps both prospective clients and search engines understand what ThreeFk Nova Technologies does best."
+          description="A quick guide for organizations exploring ThreeFk Nova products, services, and support options."
           items={homeFaq}
         />
       </section>

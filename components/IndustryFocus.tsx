@@ -10,7 +10,7 @@ const sectors = [
   {
     title: "Schools and education groups",
     description:
-      "Education ERP, school management software, fee operations, examinations, and leadership reporting for institutions that need structure and growth readiness.",
+      "Education ERP, school management software, fee operations, examinations, and leadership reporting for schools and institutions.",
     href: "/products/eduerp",
     icon: GraduationCap,
   },
@@ -48,8 +48,8 @@ export default function IndustryFocus() {
           Technology solutions for institutions, businesses, and growth teams
         </h2>
         <p className="mt-4 text-slate-300">
-          ThreeFk Nova Technologies combines enterprise software delivery, managed
-          cloud operations, website development, and AI integration to help
+          ThreeFk Nova Technologies combines software delivery, managed cloud
+          services, website development, and AI integration to help
           organizations modernize with confidence.
         </p>
       </div>

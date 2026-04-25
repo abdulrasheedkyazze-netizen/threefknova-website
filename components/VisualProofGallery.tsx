@@ -19,8 +19,8 @@ const showcaseMeta: Record<
     label: "Education ERP",
     href: "/products/eduerp",
     summary:
-      "Interface preview based on the current EduERP dashboard, academic workspace links, finance controls, and institutional reporting flows.",
-    note: "Grounded in the live EduERP template structure and current product modules.",
+      "A look at the EduERP experience for academics, finance controls, reporting, and school operations.",
+    note: "Preview of the school management and reporting experience available with EduERP.",
     logo: "/proof/eduerp-logo-horizontal.png",
   },
   bizsuite: {
@@ -28,8 +28,8 @@ const showcaseMeta: Record<
     label: "Business Platform",
     href: "/products/bizsuite",
     summary:
-      "Interface preview based on the live BizSuite operations dashboard, CRM funnel, quotations, invoices, collections, and workspace navigation.",
-    note: "Grounded in the live BizSuite dashboard and operational module structure.",
+      "A look at the BizSuite workspace for CRM, quotations, invoicing, collections, and reporting.",
+    note: "Preview of the business workflow and commercial visibility experience in BizSuite.",
     logo: "/proof/bizsuite-logo-horizontal.png",
   },
   "cloud-services": {
@@ -37,8 +37,8 @@ const showcaseMeta: Record<
     label: "Managed Infrastructure",
     href: "/products/cloud-services",
     summary:
-      "Operational topology view showing the managed deployment model used for production routing, application services, monitoring, and continuity.",
-    note: "Built from the actual deployment and operations patterns used across the stack.",
+      "A visual summary of the managed cloud environment for routing, applications, monitoring, and continuity.",
+    note: "Preview of the operational support and infrastructure view offered through Cloud Services.",
   },
 };
 
@@ -266,7 +266,7 @@ function EduErpPreview() {
                 Welcome back, Operations Team
               </div>
               <div className="mt-2 text-sm text-slate-600">
-                Premium centralized access to academic, examination, financial, and
+                Centralized access to academic, examination, financial, and
                 administrative workflows.
               </div>
             </div>
@@ -297,9 +297,9 @@ function EduErpPreview() {
           <div>
             <div className="grid gap-3 md:grid-cols-3">
               {[
-                ["Current Scope", "2026 / T2", "Latest academic cycle"],
-                ["Licensed Package", "Executive", "Premium modules enabled"],
-                ["Finance Posture", "Stable", "Collections and oversight"],
+                ["Edition", "Premium Enterprise", "Advanced reporting and oversight"],
+                ["Focus", "School Operations", "Academics, finance, and administration"],
+                ["Reporting", "Leadership Views", "Board and executive visibility"],
               ].map(([label, value, note], index) => (
                 <div
                   key={label}
@@ -431,7 +431,7 @@ function CloudServicesPreview() {
               </div>
               <div className="mt-2 text-base font-semibold text-white">
                 Production websites and platforms with stronger uptime, safer releases,
-                and clearer recovery readiness
+                and better recovery support
               </div>
             </div>
           </div>
@@ -492,12 +492,12 @@ export default function VisualProofGallery() {
           Visual Proof
         </div>
         <h2 className="text-3xl font-semibold text-white md:text-4xl">
-          Product interface highlights grounded in the real ThreeFk Nova platform ecosystem
+          Product interface highlights from the ThreeFk Nova solution range
         </h2>
         <p className="mt-4 text-slate-300">
-          These showcases are built from the current product dashboards, branding assets,
-          module structures, and operational patterns across EduERP, BizSuite, and
-          managed cloud delivery.
+          Explore selected interface views from EduERP, BizSuite, and Cloud
+          Services to see how ThreeFk Nova presents software, reporting, and
+          managed technology solutions.
         </p>
       </div>
 

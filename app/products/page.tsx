@@ -24,11 +24,11 @@ const portfolio = [
     href: "/products/eduerp",
     bestFor: "Schools, colleges, and education groups",
     summary:
-      "A school management system and education ERP platform covering academics, examinations, finance, reporting, governance, and institutional operations.",
+      "A school management system and education ERP platform covering academics, examinations, finance, payroll, portals, governance, reporting, and institutional operations.",
     points: [
-      "Student, exams, and academic workflows",
-      "Fee structures, finance tracking, and reporting",
-      "Governance visibility for leadership teams",
+      "Academic, examinations, staff, and data-import workflows",
+      "Finance ledger, SchoolPay-ready collections, payroll, and expense control",
+      "Governance visibility, audit posture, and leadership reporting",
     ],
   },
   {
@@ -48,7 +48,7 @@ const portfolio = [
     href: "/products/cloud-services",
     bestFor: "Organizations that need dependable deployment and uptime",
     summary:
-      "Managed cloud services for containerized deployments, release management, reverse proxying, backups, monitoring, and operational readiness.",
+      "Managed cloud services for hosting, monitoring, backups, secure routing, and dependable operational support.",
     points: [
       "Production deployment and environment setup",
       "Monitoring, backups, and continuity planning",
@@ -58,9 +58,9 @@ const portfolio = [
 ];
 
 const ecosystemBenefits = [
-  "A connected product story spanning websites, business systems, cloud operations, and AI-enabled workflows",
-  "Delivery models that fit both managed cloud and client appliance deployments",
-  "Professional implementation support for organizations that need structure, governance, and long-term maintainability",
+  "One technology partner for websites, business systems, cloud services, and AI support",
+  "Solutions designed to fit the needs of schools, businesses, and institutions",
+  "Guided implementation, training, and long-term support for dependable results",
 ];
 
 export default function ProductsPage() {
@@ -68,7 +68,7 @@ export default function ProductsPage() {
     {
       question: "Are these products ready for real organizational use?",
       answer:
-        "The portfolio is positioned around practical operational use cases such as school management, commercial workflow control, reporting, deployment readiness, and ongoing support.",
+        "Yes. Each solution is designed around real operational use cases such as school management, business workflow control, reporting, and dependable day-to-day support.",
     },
     {
       question: "Can products be combined with managed deployment support?",
@@ -83,7 +83,7 @@ export default function ProductsPage() {
     {
       question: "Can organizations request demos and commercial guidance?",
       answer:
-        "Yes. Buyers can use the contact page to request product guidance, demos, custom proposals, and implementation discussions.",
+        "Yes. Buyers can use the contact page to request product guidance, demos, custom quotations, and implementation discussions.",
     },
   ];
 
@@ -91,8 +91,8 @@ export default function ProductsPage() {
     <main className="brand-container py-20">
       <PageHeader
         badge="Products"
-        title="A focused product portfolio for education, business operations, cloud reliability, and AI-ready growth"
-        description="ThreeFk Nova products are designed for organizations that want dependable digital systems, stronger reporting, and a realistic path to modern operations."
+        title="Professional software and managed technology solutions for modern organizations"
+        description="Explore ThreeFk Nova solutions for education, business operations, cloud services, and practical AI support."
       />
 
       <section className="mt-12 grid gap-6 xl:grid-cols-3">
@@ -117,7 +117,7 @@ export default function ProductsPage() {
 
       <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-8">
         <h2 className="text-2xl font-semibold text-white">
-          Why the product family works well together
+          Why organizations work with ThreeFk Nova
         </h2>
         <ul className="mt-5 space-y-3 text-slate-300">
           {ecosystemBenefits.map((item) => (

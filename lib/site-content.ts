@@ -8,10 +8,10 @@ export const siteContent = {
     phone: "+256 769 378 512 / +256 714 670 455",
   },
   hero: {
-    badge: "AI-powered enterprise technology",
-    title: "Build smarter digital systems with ThreeFk Nova Technologies",
+    badge: "Modern software, cloud and AI solutions",
+    title: "Modern technology solutions for schools, businesses, and growing organizations",
     description:
-      "We design and deliver professional websites, school management software, business management platforms, cloud-ready deployments, and AI-integrated digital experiences for organizations that need dependable growth.",
+      "ThreeFk Nova Technologies delivers professional websites, education ERP, business software, managed cloud services, and AI-powered solutions for organizations that want dependable digital growth.",
     primaryCta: {
       label: "Explore Products",
       href: "/products",
@@ -26,7 +26,7 @@ export const siteContent = {
       slug: "eduerp",
       name: "ThreeFk Nova EduERP",
       summary:
-        "School management software for academics, exams, finance, reports, governance, and institutional operations.",
+        "School management software for academics, exams, finance, payroll, portals, reporting, governance, and institutional operations.",
       category: "Education ERP",
     },
     {
@@ -45,10 +45,10 @@ export const siteContent = {
     },
   ],
   stats: [
-    { label: "Products", value: "3+" },
-    { label: "Deployment Model", value: "Client Appliance" },
-    { label: "Architecture", value: "Containerized" },
-    { label: "AI Layer", value: "Server-side" },
+    { label: "Core Solutions", value: "3+" },
+    { label: "Delivery Options", value: "Cloud or Appliance" },
+    { label: "Support Model", value: "Guided" },
+    { label: "Coverage", value: "Web, ERP, AI" },
   ],
   highlights: [
     "School management software and education ERP",

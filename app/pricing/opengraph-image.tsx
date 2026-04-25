@@ -7,8 +7,8 @@ export const contentType = ogImageContentType;
 export default function Image() {
   return createOgImage({
     eyebrow: "Pricing & Licensing",
-    title: "Commercial guidance for education ERP deployment and institutional rollout",
+    title: "EduERP pricing and tailored quotations for ThreeFk Nova solutions",
     description:
-      "Review ThreeFk Nova pricing structure, licensing guidance, onboarding support, and custom quote pathways for serious institutions.",
+      "Review EduERP package pricing in USD with UGX reference, and request tailored quotations for other ThreeFk Nova solutions.",
   });
 }

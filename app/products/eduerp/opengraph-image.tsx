@@ -7,8 +7,8 @@ export const contentType = ogImageContentType;
 export default function Image() {
   return createOgImage({
     eyebrow: "EduERP",
-    title: "School management software and education ERP for academics, finance, and governance",
+    title: "School management software and education ERP for academics, finance, portals, and governance",
     description:
-      "ThreeFk Nova EduERP helps schools and institutions modernize academics, examinations, fee operations, reporting, and administrative visibility.",
+      "ThreeFk Nova EduERP helps schools and institutions modernize academics, examinations, finance, payroll, portals, reporting, and governance visibility.",
   });
 }

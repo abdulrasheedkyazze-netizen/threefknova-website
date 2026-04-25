@@ -5,25 +5,25 @@ const steps = [
     step: "01",
     title: "Discovery and requirements mapping",
     description:
-      "We clarify business goals, users, workflows, reporting expectations, deployment constraints, and the right product fit.",
+      "We understand your goals, users, workflows, reporting needs, and the right solution for your organization.",
   },
   {
     step: "02",
     title: "Solution design and implementation planning",
     description:
-      "We shape the delivery plan, environment design, integrations, onboarding sequence, and success criteria for launch.",
+      "We shape the delivery plan, key setup decisions, integrations, onboarding steps, and success targets for launch.",
   },
   {
     step: "03",
-    title: "Deployment, configuration, and training",
+    title: "Setup, launch, and training",
     description:
-      "We provision the solution, configure operational settings, validate readiness, and support administrators and users.",
+      "We configure the solution, prepare your team, and support a smooth go-live experience.",
   },
   {
     step: "04",
-    title: "Support, optimization, and long-term growth",
+    title: "Support and continuous improvement",
     description:
-      "We help teams improve stability, adoption, reporting, governance, and future AI or cloud expansion over time.",
+      "We continue with support, reporting improvements, user adoption, and future enhancements as your needs grow.",
   },
 ];
 
@@ -35,12 +35,12 @@ export default function DeliveryJourney() {
           Delivery Approach
         </div>
         <h2 className="text-3xl font-semibold text-white md:text-4xl">
-          A professional implementation model from strategy to support
+          A clear process from planning to long-term support
         </h2>
         <p className="mt-4 text-slate-300">
-          Our delivery process is designed for organizations that need more than a
-          simple website build. We plan for operations, governance, adoption,
-          deployment quality, and long-term system value.
+          Our delivery process is designed for organizations that want more than
+          a simple handover. We focus on practical setup, user success, and
+          dependable long-term value.
         </p>
       </div>
 

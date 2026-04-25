@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata = buildMetadata({
   title: "Managed Cloud Services",
   description:
-    "ThreeFk Nova Cloud Services supports managed deployments, reverse proxying, backups, monitoring, release workflows, and secure operational readiness for modern platforms.",
+    "ThreeFk Nova Cloud Services provides managed hosting, deployment, monitoring, backups, and operational support for modern platforms.",
   path: "/products/cloud-services",
   keywords: [
     "managed cloud services",
@@ -29,7 +29,7 @@ const serviceAreas = [
 const benefits = [
   "Reliable infrastructure for business-critical applications",
   "Cleaner deployment processes and operational consistency",
-  "Better visibility into uptime, failures, and recovery readiness",
+  "Better visibility into uptime, failures, and service recovery",
   "A stronger production foundation for websites, ERP systems, and AI-enabled tools",
 ];
 
@@ -38,12 +38,12 @@ export default function CloudServicesPage() {
     {
       question: "Do Cloud Services only apply to ThreeFk Nova products?",
       answer:
-        "Cloud Services is positioned around the same professional delivery model and is strongest when paired with ThreeFk Nova platforms, websites, and operational support needs.",
+        "No. Cloud Services can support ThreeFk Nova solutions as well as other business websites and software platforms that need dependable hosting and operational support.",
     },
     {
       question: "What problems do managed cloud services solve?",
       answer:
-        "They help teams improve deployment quality, uptime visibility, backups, release discipline, routing, and overall production confidence.",
+        "They help teams improve uptime, backups, release control, secure routing, monitoring, and overall production confidence.",
     },
     {
       question: "Can Cloud Services support business websites as well as software platforms?",
@@ -57,7 +57,7 @@ export default function CloudServicesPage() {
       <PageHeader
         badge="Managed Cloud Services"
         title="Deployment, reliability, monitoring, and release support for modern production systems"
-        description="ThreeFk Nova Cloud Services helps organizations run websites, ERP systems, and business platforms with stronger operational discipline and production confidence."
+        description="ThreeFk Nova Cloud Services helps organizations run websites, ERP systems, and business platforms with dependable hosting and support."
       />
 
       <section className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -85,12 +85,12 @@ export default function CloudServicesPage() {
         <p className="mt-4 max-w-4xl text-slate-300">
           Cloud Services is ideal for teams that want reliable production
           environments for business websites, education ERP systems, internal
-          business software, and AI-ready digital services without leaving
-          operational quality to chance.
+          business software, and AI-enabled digital services without leaving
+          performance and support to chance.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link href="/contact" className="btn-primary">
-            Discuss Deployment Support
+            Discuss Cloud Services
           </Link>
           <Link href="/system-requirements" className="btn-secondary">
             Review Deployment Model

@@ -37,7 +37,7 @@ const services = [
   {
     title: "Managed cloud and deployment services",
     description:
-      "Containerized deployments, reverse proxy configuration, release workflows, monitoring, backups, and production readiness support.",
+      "Managed hosting, secure routing, monitoring, backups, release support, and dependable cloud operations.",
   },
   {
     title: "AI automation and intelligent assistants",
@@ -64,12 +64,12 @@ export default function ServicesPage() {
     {
       question: "Do you only build websites?",
       answer:
-        "No. Website development is one service line, but ThreeFk Nova Technologies also supports education ERP implementation, business software rollout, cloud operations, AI assistants, onboarding, and support.",
+        "No. Website development is one service line, but ThreeFk Nova Technologies also supports education ERP implementation, business software delivery, cloud services, AI assistants, onboarding, and support.",
     },
     {
       question: "Can you handle both delivery and operational setup?",
       answer:
-        "Yes. The service model includes deployment planning, configuration, validation, user enablement, and ongoing optimization instead of stopping at initial code delivery.",
+        "Yes. The service model includes setup, configuration, user enablement, and ongoing optimization instead of stopping at the initial launch.",
     },
     {
       question: "Are your services suitable for schools and institutions?",
@@ -79,7 +79,7 @@ export default function ServicesPage() {
     {
       question: "Can organizations request a custom implementation path?",
       answer:
-        "Yes. Delivery can be aligned to the organization’s workflows, deployment model, onboarding needs, governance expectations, and budget realities.",
+        "Yes. Delivery can be aligned to the organization’s workflows, support needs, governance expectations, and budget realities.",
     },
   ];
 
@@ -88,7 +88,7 @@ export default function ServicesPage() {
       <PageHeader
         badge="Services"
         title="Implementation, cloud, website, and AI services for serious organizations"
-        description="We help clients move from idea to dependable production systems with a delivery model that covers planning, deployment, onboarding, and long-term support."
+        description="We help clients move from idea to dependable digital systems with planning, implementation, training, and long-term support."
       />
 
       <section className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -114,8 +114,8 @@ export default function ServicesPage() {
           <h2 className="text-2xl font-semibold text-white">Ideal for</h2>
           <p className="mt-4 text-slate-300">
             Our services fit schools, SMEs, institutions, and operational teams that
-            need a professional partner for enterprise websites, cloud-ready
-            deployments, education ERP rollout, business software implementation, or
+            need a professional partner for enterprise websites, managed cloud
+            services, education ERP, business software implementation, or
             AI-enabled digital transformation.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">

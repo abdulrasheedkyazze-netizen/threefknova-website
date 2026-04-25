@@ -30,7 +30,7 @@ const pillars = [
   {
     title: "Managed cloud and deployment discipline",
     description:
-      "We support organizations with deployment planning, reverse proxying, containerized delivery, release workflows, backups, and operational readiness.",
+      "We support organizations with hosting, monitoring, backups, secure routing, and dependable cloud operations.",
   },
   {
     title: "AI-ready transformation",
@@ -40,10 +40,10 @@ const pillars = [
 ];
 
 const differentiators = [
-  "Business-first thinking instead of purely technical implementation",
-  "A practical delivery model covering requirements, deployment, onboarding, and support",
-  "Solutions designed for reliability, governance, and long-term operational use",
-  "A product mindset that combines websites, software platforms, cloud operations, and AI",
+  "Business-focused thinking shaped around real operational needs",
+  "A practical delivery model covering planning, implementation, training, and support",
+  "Solutions designed for reliability, governance, and long-term use",
+  "A connected offering across websites, software, cloud services, and AI",
 ];
 
 const industries = [
@@ -59,7 +59,7 @@ export default function AboutPage() {
       <PageHeader
         badge="About ThreeFk Nova"
         title="A technology partner for digital transformation, enterprise software, cloud operations, and AI adoption"
-        description="ThreeFk Nova Technologies supports organizations that need more than a simple website build. We help teams plan, launch, and grow reliable digital systems that improve operations and decision-making."
+        description="ThreeFk Nova Technologies helps organizations build, launch, and grow reliable digital systems that improve operations and decision-making."
       />
 
       <section className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -100,10 +100,10 @@ export default function AboutPage() {
       <section className="mt-12 rounded-3xl border border-amber-400/25 bg-[rgba(245,158,11,0.08)] p-8">
         <h2 className="text-2xl font-semibold text-white">Our operating approach</h2>
         <p className="mt-4 max-w-4xl text-slate-300">
-          We believe the best digital projects combine good design, sound technical
-          implementation, operational clarity, and realistic adoption planning. That
-          is why our work spans positioning, delivery, deployment, training, and
-          ongoing support instead of stopping at code alone.
+          We believe the best digital projects combine good design, dependable
+          implementation, practical support, and a clear understanding of the
+          client’s operations. That is why our work continues beyond launch into
+          training, support, and long-term improvement.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link href="/services" className="btn-secondary">
